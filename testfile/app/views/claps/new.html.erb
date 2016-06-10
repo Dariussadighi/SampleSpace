@@ -1,0 +1,28 @@
+<% if !@clap.errors.empty? %>
+   <div class = "alert alert-error">
+
+      <ul>
+         <% @clap.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+      </ul>
+
+   </div>
+<% end %>
+
+<a href="/sounds">Home</a>
+<a href="/subs">808s</a>
+<a href="/kicks">Kicks</a>
+<a href="/snares">Snares</a>
+<a href="/hats">Hats</a>
+<a href="/claps">Claps</a>
+
+<div class = "well">
+   <%= form_for @clap, html: { multipart: true } do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment %>
+      <%= f.submit "Save", class: "btn btn-primary" %>
+   <% end %>
+</div>

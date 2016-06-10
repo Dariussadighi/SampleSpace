@@ -1,0 +1,44 @@
+<% if !flash[:notice].blank? %>
+   <div class = "alert alert-info">
+      <%= flash[:notice] %>
+   </div>
+<% end %>
+
+<a href="/sounds">Home</a>
+<a href="/subs">808s</a>
+<a href="/kicks">Kicks</a>
+<a href="/snares">Snares</a>
+<a href="/hats">Hats</a>
+<a href="/claps">Claps</a>
+
+<h1>Sample Space</h1>
+<br />
+
+<%= link_to "New Sound", new_clap_path, class: "btn btn-primary" %>
+<br />
+<br />
+
+<table class = "table table-bordered table-striped">
+   <thead>
+      <tr>
+         <th>Sound</th>
+         <th>Play Sound</th>
+         <th> </th>
+      </tr>
+   </thead>
+
+   <tbody>
+      <% @claps.each do |clap| %>
+
+         <tr>
+            <td><%= clap.name %></td>
+            <td><%= link_to "Play", clap.attachment_url %></td>
+            <td><%= button_to "Delete",  clap, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{clap.name}?" %></td>
+         </tr>
+
+      <% end %>
+
+
+   </tbody>
+
+</table>
