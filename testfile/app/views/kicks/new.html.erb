@@ -10,14 +10,23 @@
    </div>
 <% end %>
 
-<a href="/sounds">Home</a>
-<a href="/subs">808s</a>
-<a href="/kicks">Kicks</a>
-<a href="/snares">Snares</a>
-<a href="/hats">Hats</a>
-<a href="/claps">Claps</a>
+<div class="container">
+   <nav>
+      <div class="nav-wrapper">
+         <a href="/sounds" class="brand-logo" >Home</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="/subs">808s</a>
+            <a href="/kicks">Kicks</a>
+            <a href="/snares">Snares</a>
+            <a href="/hats">Hats</a>
+            <a href="/cymbals">Cymbals</a>
+            <a href="/claps">Claps</a>
+         </ul>
+      </div>
+   </nav>
 
-<div class = "well">
+<div class = "new-middle">
+<h3>New Kick</h3>
    <%= form_for @kick, html: { multipart: true } do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -25,4 +34,18 @@
       <%= f.file_field :attachment %>
       <%= f.submit "Save", class: "btn btn-primary" %>
    <% end %>
+</div>
+<footer class="page-footer">
+   <div class="container">
+      <div class="row">
+         <div class="col l6 s12">
+            </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="copyright">
+            © 2016 Copyright SampleSpace
+            </div>
+         </div>
+</footer>
 </div>

@@ -1,44 +1,76 @@
-<% if !flash[:notice].blank? %>
+<div class="container">
+   <nav>
+      <div class="nav-wrapper">
+         <a href="/sounds" class="brand-logo" >Home</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="/subs">808s</a>
+            <a href="/kicks">Kicks</a>
+            <a href="/snares">Snares</a>
+            <a href="/hats">Hats</a>
+            <a href="/cymbals">Cymbals</a>
+            <a href="/claps">Claps</a>
+         </ul>
+      </div>
+   </nav>
+
+   <% if !flash[:notice].blank? %>
    <div class = "alert alert-info">
       <%= flash[:notice] %>
    </div>
-<% end %>
+   <% end %>
 
-<a href="/sounds">Home</a>
-<a href="/subs">808s</a>
-<a href="/kicks">Kicks</a>
-<a href="/snares">Snares</a>
-<a href="/hats">Hats</a>
-<a href="/claps">Claps</a>
+<div class="middle">
 
-<h1>Sample Space</h1>
-<br />
+  <form id="search">
+    <h1>Search snares by name:</h1>
+    <input type="search" id="search-keyword">
+    <select id="search-type">
+      <option id="artist" value="artist">Search by Artist</option>
+      <option id="track" value="track">Search by Track</option>
+    </select>
+<!--     <input id="submit" type="submit" value="Submit"> -->
+  </form>
+  <br>
 
-<%= link_to "New Sound", new_snare_path, class: "btn btn-primary" %>
-<br />
-<br />
-
+   <%= link_to "New Sound", new_snare_path, class: "btn btn-primary" %>
+<br>
 <table class = "table table-bordered table-striped">
    <thead>
       <tr>
          <th>Sound</th>
          <th>Play Sound</th>
+         <th>Download Sound</th>
          <th> </th>
       </tr>
    </thead>
-
    <tbody>
       <% @snares.each do |snare| %>
-
          <tr>
             <td><%= snare.name %></td>
             <td><%= link_to "Play", snare.attachment_url %></td>
+            <td><a href=<%=snare.attachment_url%> download>Download</a></td>
             <td><%= button_to "Delete",  snare, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{snare.name}?" %></td>
          </tr>
-
       <% end %>
-
-
    </tbody>
-
 </table>
+</div>
+
+<footer class="page-footer">
+   <div class="container">
+      <div class="row">
+         <div class="col l6 s12">
+            </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="copyright">
+            © 2016 Copyright SampleSpace
+            </div>
+         </div>
+</footer>
+</div>
+
+
+
+

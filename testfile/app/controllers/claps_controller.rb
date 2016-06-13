@@ -20,7 +20,7 @@ class ClapsController < ApplicationController
 
    end
    def destroy
-      @hat = Clap.find(params[:id])
+      @clap = Clap.find(params[:id])
       @clap.destroy
       redirect_to claps_path, notice:  "The sound #{@clap.name} has been deleted."
    end

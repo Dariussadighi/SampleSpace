@@ -3,13 +3,57 @@
       <%= flash[:notice] %>
    </div>
 <% end %>
+<div class="container">
+   <nav>
+      <div class="nav-wrapper">
+         <a href="/sounds" class="brand-logo" >Home</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="/subs">808s</a>
+            <a href="/kicks">Kicks</a>
+            <a href="/snares">Snares</a>
+            <a href="/hats">Hats</a>
+            <a href="/cymbals">Cymbals</a>
+            <a href="/claps">Claps</a>
+         </ul>
+      </div>
+   </nav>
+<div class="middle">
+  <h1>SampleSpace</h1>
+ <div class="content">
+    <p>
+      SampleSpace is an open-source ongoing library for music producers and audiophiles to upload, browse, and download .wav and .mp3 files for recording and composing and is geared toward the hip hop and electronic communicties. Current categories include 808s, kicks, snares, hi-hats, cymbals, and claps but I plan on extending this list to include vocal samples, aux percussion, fx, found sounds, noise, etc.
+    </p>
+    <br>
+    <p>
+      Sign in With Facebook:
+    </p>
+</div>
+    <div class="signup">
+      <form class="signup" action="/signup" method="post">
+        <label for="email">Email: </label>
+        <input name="email" type="text" />
+        <br />
+        <label for="password">Password: </label>
+        <input name="password" type="password" />
+        <br />
+        <input type="submit" value="Sign Up" class="btn btn-primary" />
+      </form>
+      <br>
+    </div>
+</div>
 
-<a href="/sounds">Home</a>
-<a href="/subs">808s</a>
-<a href="/kicks">Kicks</a>
-<a href="/snares">Snares</a>
-<a href="/hats">Hats</a>
-<a href="/claps">Claps</a>
-
-<h1>Sample Space</h1>
+<footer class="page-footer">
+   <div class="container">
+      <div class="row">
+         <div class="col l6 s12">
+            </div>
+            </div>
+         </div>
+         <div class="footer-copyright">
+            <div class="copyright">
+            © 2016 Copyright SampleSpace
+            </div>
+         </div>
+</footer>
+</div>
 
