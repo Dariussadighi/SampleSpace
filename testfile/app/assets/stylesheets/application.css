@@ -46,12 +46,12 @@ body {
   margin-left: 125px
 }
 
-.top {
+/* .top {
   text-align: center;
   border: 1px solid black;
   padding: 10px;
   background-color: white;
-}
+} */
 
 .middle {
   text-align: center;
@@ -59,18 +59,19 @@ body {
   background-color: white;
 }
 
+/* .bottom {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
 .new-middle {
   text-align: center;
   padding: 50px;
   background-color: white;
   margin-bottom: 185px;
 }
-.bottom {
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px;
-  background-color: white;
-}
+ */
 
 .alert {
   text-align: center;
